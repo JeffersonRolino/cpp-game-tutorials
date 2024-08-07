@@ -1,22 +1,20 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
 int main()
 {
-	// Integers
-	int hp = 100;
-	hp += 1;
-
-	// Floats
-	float height = 1.75f;
-
-	float playerDamage = 100.0f;
-	float zombieHealth = 200.0f;
-
-	zombieHealth = zombieHealth - playerDamage;
+	string playerName = "Jefferson";
+	int size = playerName.length();
  
-	cout << "The zombie HP is: " << zombieHealth << endl;
+	cout << "Your name is " << playerName;
+	cout << " and your name is " << size << " letters long..." << endl;
+
+	cout << "\n";
+
+	playerName = "Fred";
+	cout << "Now the player's name is: " << playerName << endl;
 
 	return 0;
 }
