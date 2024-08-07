@@ -5,16 +5,28 @@ using namespace std;
 
 int main()
 {
-	string playerName = "Jefferson";
-	int size = playerName.length();
- 
-	cout << "Your name is " << playerName;
-	cout << " and your name is " << size << " letters long..." << endl;
+	string playerName;
+	int age;
 
-	cout << "\n";
+	cout << "What is your name?\n";
+	cin >> playerName;
 
-	playerName = "Fred";
-	cout << "Now the player's name is: " << playerName << endl;
+	cout << "How old are you?\n";
+	cin >> age;
+
+	cout << "\nHello " << playerName << "\n";
+
+	if (age < 12)
+	{
+		cout << "Sorry, you are to young to play this game...\n\n";
+	}
+	else if (age >= 100)
+	{
+		cout << "Sorry, you are to old to play this game...\n\n";
+	}
+	else {
+		cout << "Welcome to the game...\n\n";
+	}
 
 	return 0;
 }
