@@ -5,32 +5,26 @@ using namespace std;
 
 int main()
 {
-	string playerName;
-	int age;
+	int counter = 0;
 
-	cout << "What is your name?\n";
-	cin >> playerName;
+	while (counter < 10) {
+		cout << "ha";
+		counter++;
+	}
 
-	cout << "How old are you?\n";
-	cin >> age;
+	cout << "\n";
 
-	cout << "\nHello " << playerName << "\n";
+	for (int i = 0; i < 10; i++) {
+		cout << "ha";
+	}
 
-	if (age <= 3)
-	{
-		cout << "You are lying!\n\n";
-	}
-	else if (age < 12)
-	{
-		cout << "Sorry, you are to young to play this game...\n\n";
-	}
-	else if (age > 90)
-	{
-		cout << "Sorry, you are to old to play this game...\n\n";
-	}
-	else {
-		cout << "Welcome to the game...\n\n";
-	}
+	cout << "\n";
+
+	counter = 0;
+	do {
+		cout << "ha";
+		counter++;
+	} while (counter < 10);
 
 	return 0;
 }
