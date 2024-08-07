@@ -16,11 +16,15 @@ int main()
 
 	cout << "\nHello " << playerName << "\n";
 
-	if (age < 12)
+	if (age <= 3)
+	{
+		cout << "You are lying!\n\n";
+	}
+	else if (age < 12)
 	{
 		cout << "Sorry, you are to young to play this game...\n\n";
 	}
-	else if (age >= 100)
+	else if (age > 90)
 	{
 		cout << "Sorry, you are to old to play this game...\n\n";
 	}
