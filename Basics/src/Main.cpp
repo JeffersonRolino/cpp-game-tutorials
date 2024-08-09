@@ -1,31 +1,29 @@
 #include <iostream>
 #include <string>
+#include <random>
+#include <ctime>
 
 using namespace std;
 
-// This is a one line comment
-
-/*
-	This is a multline comment
-	You can type in multiple lines
-	The compiler will igore these lines...
-*/
-
 int main()
 {
-	for (int i = 1; i < 100; i *= 2) {
-		cout << i << endl;
-	}
+	int seed = time(0);
+	cout << "The seed is: " << seed << "\n\n";
 
-	cout << "\n";
+	default_random_engine randomGenerator(seed);
+	uniform_real_distribution<float> attackRoll(0.0f, 1.0f);
 
-	bool isGameOver = true;
+	cout << "You are attacking the goblin... " << "\n";
 
-	if (isGameOver) {
-		cout << "The game is over...\n";
+	float attack = attackRoll(randomGenerator);
+
+	cout << "You roll " << attack << "\n";
+
+	if (attack <= 0.6f) {
+		cout << "You hit the goblin! Yay\n";
 	}
 	else {
-		cout << "The game is on...\n";
+		cout << "You miss the attack, oh no!\n";
 	}
 
 	return 0;
