@@ -5,7 +5,9 @@
 
 using namespace std;
 
-int getNumberOfHumans();
+int getNumberOfSoldiers(string race);
+
+void printResults(int numberOfHumans, int numberOfOrcs);
 
 int main()
 {
@@ -34,10 +36,8 @@ int main()
 	cout << "COMBAT SIMULATOR 1D" << "\n";
 	cout << "********************************************" << "\n";
 	
-	numberOfHumans = getNumberOfHumans();
-
-	cout << "Enter the number of Orcs: " << "\n";
-	cin >> numberOfOrcs;
+	numberOfHumans = getNumberOfSoldiers("Humans");
+	numberOfOrcs = getNumberOfSoldiers("Orcs");
 
 	while (numberOfHumans > 0 && numberOfOrcs > 0) {
 		//Get our attack result
@@ -71,6 +71,19 @@ int main()
 		}
 	}
 
+	printResults(numberOfHumans, numberOfOrcs);
+
+	return 0;
+}
+
+int getNumberOfSoldiers(string race) {
+	int numberOfSoldiers;
+	cout << "Enter the number of " << race << ":" << "\n";
+	cin >> numberOfSoldiers;
+	return numberOfSoldiers;
+}
+
+void printResults(int numberOfHumans, int numberOfOrcs) {
 	cout << "\n\n";
 	cout << "********************************************" << "\n";
 	cout << "The battle is over!!!\n";
@@ -81,13 +94,4 @@ int main()
 	else {
 		cout << "The Orcs won! " << numberOfOrcs << " orcs are left in the battlefield...\n\n";
 	}
-
-	return 0;
-}
-
-int getNumberOfHumans() {
-	int numberOfHumans;
-	cout << "Enter the number of humans: " << "\n";
-	cin >> numberOfHumans;
-	return numberOfHumans;
 }
