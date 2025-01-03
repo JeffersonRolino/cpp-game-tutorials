@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\challenges\GameChallenge01.cpp" />
-    <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\ItemShop.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

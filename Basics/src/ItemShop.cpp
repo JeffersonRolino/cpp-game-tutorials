@@ -62,7 +62,7 @@ bool buyItems(int playerInventory[numberOfItems]) {
 		return true;
 	}
 
-	if (input < 0 || input > numberOfItems) {
+	if (input <= 0 || input > numberOfItems) {
 		cout << "Invalid input...\n";
 		return false;
 	}
